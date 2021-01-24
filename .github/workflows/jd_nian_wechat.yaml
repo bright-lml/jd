@@ -49,3 +49,4 @@ jobs:
                   SYNCURL: jd_nian_wechat.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  JD_WECHAT_USER_AGENT : ${{ github.event.client_payload.JD_WECHAT_USER_AGENT  || secrets.JD_WECHAT_USER_AGENT  }}

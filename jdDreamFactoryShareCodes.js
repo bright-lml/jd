@@ -11,6 +11,12 @@ let shareCodes = [
   '-OvElMzqeyeGBWazWYjI1Q==',//账号二的好友shareCode，不同好友中间用@符号隔开
 ]
 
+// 从日志获取互助码
+const logShareCodes = require('./utils/jdShareCodes');
+if (logShareCodes.DREAM_FACTORY_SHARE_CODES.length > 0 && !process.env.DREAM_FACTORY_SHARE_CODES) {
+  process.env.DREAM_FACTORY_SHARE_CODES = logShareCodes.DREAM_FACTORY_SHARE_CODES.join('&');
+}
+
 // 判断github action里面是否有京喜工厂互助码
 if (process.env.DREAM_FACTORY_SHARE_CODES) {
   if (process.env.DREAM_FACTORY_SHARE_CODES.indexOf('&') > -1) {

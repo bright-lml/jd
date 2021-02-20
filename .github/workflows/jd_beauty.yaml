@@ -6,7 +6,7 @@ name: 美丽研究院
 on:
     workflow_dispatch:
     schedule:
-        - cron: "1 7,12,19 * * *"
+        - cron: "1 1,4,23 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【美丽研究院】"
+            - name: "运行 美丽研究院"
               run: |
                   node onlyOneExecute.js
               env:

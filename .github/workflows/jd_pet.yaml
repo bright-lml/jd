@@ -49,5 +49,5 @@ jobs:
                   PET_NOTIFY_CONTROL: ${{ github.event.client_payload.PET_NOTIFY_CONTROL || secrets.PET_NOTIFY_CONTROL }}
                   PETSHARECODES: ${{ github.event.client_payload.PETSHARECODES || secrets.PETSHARECODES }}
                   SYNCURL: jd_pet.js
-                  REPOURL: https://github.com/bright-lml/jd/raw/main/
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

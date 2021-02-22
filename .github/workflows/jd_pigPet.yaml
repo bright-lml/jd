@@ -10,7 +10,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_pigPet
+        types: jd_petPig
 
 jobs:
     build:

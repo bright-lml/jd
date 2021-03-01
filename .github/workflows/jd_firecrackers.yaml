@@ -1,4 +1,4 @@
-name: 她的节，享京豆
+name: 她的节享京豆
 
 on:
     workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行【她的节，享京豆】"
+            - name: "运行【她的节享京豆】"
               run: |
                   node onlyOneExecute.js
               env:

@@ -6,7 +6,7 @@ name: 京东口袋书店
 on:
     workflow_dispatch:
     schedule:
-        - cron: "1 8,12,18 * * *"
+        - cron: "1 0,4,10 * * *"
     watch:
         types: [started]
     repository_dispatch:

@@ -3,11 +3,11 @@ name: 京喜财富岛
 on:
     workflow_dispatch:
     schedule:
-        - cron: "30 * * * *"
+        - cron: "0 0,5,11 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jx_cfd
+        types: jd_cfd
 
 jobs:
     build:
@@ -44,7 +44,7 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jx_cfd.js
-                  REPOURL: https://github.com/Choicc/MyActions/raw/main/scripts/
+                  SYNCURL: jd_cfd.js
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
                   CFD_NOTIFY_CONTROL: ${{ github.event.client_payload.CFD_NOTIFY_CONTROL || secrets.CFD_NOTIFY_CONTROL }}

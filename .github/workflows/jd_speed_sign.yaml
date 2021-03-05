@@ -49,4 +49,4 @@ jobs:
                   SYNCURL: jd_speed_sign.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
-                  JS_USER_AGENTS: ${{ github.event.client_payload.JS_USER_AGENTS || secrets.JS_USER_AGENTS }}
+                  JS_USER_AGENT: ${{ github.event.client_payload.JS_USER_AGENT || secrets.JS_USER_AGENT }}

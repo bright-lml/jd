@@ -3,7 +3,7 @@ name: 女装盲盒
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0 9-20/1 *"
+        - cron: "0 0-12/1 9-20 * *"
     watch:
         types: [started]
     repository_dispatch:

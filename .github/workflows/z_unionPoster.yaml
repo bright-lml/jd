@@ -3,7 +3,7 @@ name: 美的家电节
 on:
     workflow_dispatch:
     schedule:
-        - cron: "15 2 * * *"
+        - cron: "0 2 * * *"
     watch:
         types: [started]
     repository_dispatch:

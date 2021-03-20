@@ -48,7 +48,7 @@ jobs:
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   FRUIT_BEAN_CARD: ${{ github.event.client_payload.FRUIT_BEAN_CARD || secrets.FRUIT_BEAN_CARD }}
                   FRUIT_NOTIFY_CONTROL: ${{ github.event.client_payload.FRUIT_NOTIFY_CONTROL || secrets.FRUIT_NOTIFY_CONTROL }}
-                  FRUITSHARECODES: ${{ github.event.client_payload.FruitShareCodes || secrets.FruitShareCodes }}
+                  FRUITSHARECODES: ${{ secrets.FRUITSHARECODES }}
                   SYNCURL: jd_fruit.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

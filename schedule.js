@@ -38,6 +38,32 @@ jobs:
               run: |
                   node schedule.js
               env:
+                  A: ${{ github.event.client_payload.A || secrets.A }}
+                  B: ${{ github.event.client_payload.B || secrets.B }}
+                  C: ${{ github.event.client_payload.C || secrets.C }}
+                  D: ${{ github.event.client_payload.D || secrets.D }}
+                  E: ${{ github.event.client_payload.E || secrets.E }}
+                  F: ${{ github.event.client_payload.F || secrets.F }}
+                  G: ${{ github.event.client_payload.G || secrets.G }}
+                  H: ${{ github.event.client_payload.H || secrets.H }}
+                  I: ${{ github.event.client_payload.I || secrets.I }}
+                  J: ${{ github.event.client_payload.J || secrets.J }}
+                  K: ${{ github.event.client_payload.K || secrets.K }}
+                  L: ${{ github.event.client_payload.L || secrets.L }}
+                  M: ${{ github.event.client_payload.M || secrets.M }}
+                  N: ${{ github.event.client_payload.N || secrets.N }}
+                  O: ${{ github.event.client_payload.O || secrets.O }}
+                  P: ${{ github.event.client_payload.P || secrets.P }}
+                  Q: ${{ github.event.client_payload.Q || secrets.Q }}
+                  R: ${{ github.event.client_payload.R || secrets.R }}
+                  S: ${{ github.event.client_payload.S || secrets.S }}
+                  T: ${{ github.event.client_payload.T || secrets.T }}
+                  U: ${{ github.event.client_payload.U || secrets.U }}
+                  V: ${{ github.event.client_payload.V || secrets.V }}
+                  W: ${{ github.event.client_payload.W || secrets.W }}
+                  X: ${{ github.event.client_payload.X || secrets.X }}
+                  Y: ${{ github.event.client_payload.Y || secrets.Y }}
+                  Z: ${{ github.event.client_payload.Z || secrets.Z }}
                   #推送专用
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ github.event.client_payload.BARK_PUSH || secrets.BARK_PUSH }}

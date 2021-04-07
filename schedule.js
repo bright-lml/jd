@@ -81,6 +81,7 @@ jobs:
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   #通用配置
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
+                  JD_COOKIE_URL: ${{ github.event.client_payload.JD_COOKIE_URL || secrets.JD_COOKIE_URL }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
                   DO_NOT_FORK: ${{ github.event.client_payload.DO_NOT_FORK || secrets.DO_NOT_FORK }}
                   #GITHUB TOKEN

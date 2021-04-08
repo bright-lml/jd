@@ -1,4 +1,4 @@
-name: wuzhi01店铺签到
+name: wuzhi03店铺签到
 
 on:
     workflow_dispatch:

@@ -1,6 +1,3 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: 全民抢红包
 
 on:
@@ -17,15 +14,16 @@ jobs:
         runs-on: ubuntu-latest
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js 10.x
+            - name: 拉取代码
+              uses: actions/checkout@v2
+            - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
-            - name: npm install
+                  node-version: "14.x"
+            - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 【京东全民抢红包】"
+            - name: "运行 全民抢红包"
               run: |
                   node onlyOneExecute.js
               env:
@@ -47,5 +45,5 @@ jobs:
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   SYNCURL: jd_redPacket.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
+                  REPOURL: https://github.com/wuzhi03/MyActions/raw/main/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

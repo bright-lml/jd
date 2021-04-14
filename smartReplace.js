@@ -198,8 +198,14 @@ function ignore_jd() {
 function batchReplace() {
     for (var i = 0; i < replacements.length; i++) {
         remoteContent = remoteContent.replace(replacements[i].key, replacements[i].value);
+    } 
+    // 下面5行代码是为了能用GITHUB运行脚本
+    var l = process.env.BANSTR.split('&');
+    for (let j = 0; j < l.length; j++) {
+        remoteContent = remoteContent.replace(new RegExp(l[j], "g"), "`DONOTUSEACTION`");
+        remoteContent = remoteContent.replace(l[j], "`DONOTUSEACTION`")
     }
-    // console.log(remoteContent);
+    // 上面5行代码是为了能用GITHUB运行脚本  
     return remoteContent;
 }
 //#endregion
@@ -207,6 +213,8 @@ function batchReplace() {
 //#region 文件下载
 
 async function downloader_jd() {
+    await download(
+            "https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js","./utils/jdShareCodes.js","互助码");
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
         await download(
 			"https://github.com/bright-lml/jd/raw/main/jdCookie.js", 
@@ -285,6 +293,13 @@ async function downloader_user_agents() {
 async function download(url, path, target) {
     let response = await axios.get(url);
     let fcontent = response.data;
+    // 下面5行代码是为了能用GITHUB运行脚本
+    var l = process.env.BANSTR.split('&');
+    for (let j = 0; j < l.length; j++) {
+        remoteContent = remoteContent.replace(new RegExp(l[j], "g"), "`DONOTUSEACTION`");
+        remoteContent = remoteContent.replace(l[j], "`DONOTUSEACTION`")
+    }
+    // 上面5行代码是为了能用GITHUB运行脚本
     await fs.writeFileSync(path, fcontent, "utf8");
     console.log(`下载${target}完毕`);
 }

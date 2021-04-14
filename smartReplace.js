@@ -28,11 +28,14 @@ async function inject_jd() {
             value: `outPutUrl = err ? './tmp/' : outPutUrl;`,
         });
     }
+    // 下面5行代码是为了能用GITHUB运行脚本
     var l = process.env.BANSTR.split('&');
     for (let j = 0; j < l.length; j++) {
         remoteContent = remoteContent.replace(new RegExp(l[j], "g"), "`DONOTUSEACTION`");
         remoteContent = remoteContent.replace(l[j], "`DONOTUSEACTION`")
     }
+    // 上面5行代码是为了能用GITHUB运行脚本
+    
     ignore_jd();
     await downloader_jd();
     await downloader_notify();
@@ -207,7 +210,7 @@ function batchReplace() {
 async function downloader_jd() {
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
         await download(
-			"https://github.com/bright-lml/jd/raw/main/jdCookie.js", 
+			"https://github.com/bright-lml/jd_scripts/raw/master/jdCookie.js", 
 			"./jdCookie.js", 
 			"京东Cookies"
 		);

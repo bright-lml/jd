@@ -213,7 +213,6 @@ function batchReplace() {
 //#region 文件下载
 
 async function downloader_jd() {
-    //await download("https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js","./utils/jdShareCodes.js","互助码");
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
         await download(
 			"https://github.com/bright-lml/jd/raw/main/jdCookie.js", 
@@ -278,6 +277,10 @@ async function downloader_jd() {
             "USER_AGENTS"
         );
     }
+}
+
+async function downloader_jdShareCodes() {
+    await download("https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js","./utils/jdShareCodes.js","互助码");
 }
 
 async function downloader_notify() {

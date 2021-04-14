@@ -201,61 +201,61 @@ function batchReplace() {
 
 async function downloader_jd() {
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
-        await download("https://github.com/wuzhi03/MyActions/raw/main/jdCookie.js", "./jdCookie.js", "京东Cookies");
+        await download("https://github.com/bright-lml/jd_scripts/raw/master/jdCookie.js", "./jdCookie.js", "京东Cookies");
     if (remoteContent.indexOf("jdFruitShareCodes") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdFruitShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdFruitShareCodes.js",
             "./jdFruitShareCodes.js",
             "东东农场互助码"
         );
     }
     if (remoteContent.indexOf("jdPetShareCodes") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdPetShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdPetShareCodes.js",
             "./jdPetShareCodes.js",
             "京东萌宠"
         );
     }
     if (remoteContent.indexOf("jdPlantBeanShareCodes") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdPlantBeanShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdPlantBeanShareCodes.js",
             "./jdPlantBeanShareCodes.js",
             "种豆得豆互助码"
         );
     }
     if (remoteContent.indexOf("jdSuperMarketShareCodes") > 0)
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdSuperMarketShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdSuperMarketShareCodes.js",
             "./jdSuperMarketShareCodes.js",
             "京小超互助码"
         );
     if (remoteContent.indexOf("jdFactoryShareCodes") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdFactoryShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdFactoryShareCodes.js",
             "./jdFactoryShareCodes.js",
             "东东工厂互助码"
         );
     }
     if (remoteContent.indexOf("jdDreamFactoryShareCodes") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdDreamFactoryShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdDreamFactoryShareCodes.js",
             "./jdDreamFactoryShareCodes.js",
             "京喜工厂互助码"
         );
     }
     if (remoteContent.indexOf("new Env('京喜农场')") > 0) {
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdJxncTokens.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdJxncTokens.js",
             "./jdJxncTokens.js",
             "京喜农场Token"
         );
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/jdJxncShareCodes.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/jdJxncShareCodes.js",
             "./jdJxncShareCodes.js",
             "京喜农场分享码"
         );
         await download(
-            "https://github.com/wuzhi03/MyActions/raw/main/USER_AGENTS.js",
+            "https://github.com/bright-lml/jd_scripts/raw/master/USER_AGENTS.js",
             "./USER_AGENTS.js",
             "USER_AGENTS"
         );
@@ -263,11 +263,12 @@ async function downloader_jd() {
 }
 
 async function downloader_notify() {
-    await download("https://github.com/wuzhi03/MyActions/raw/main/sendNotify.js", "./sendNotify.js", "统一通知");
+    await download("https://github.com/bright-lml/jd_scripts/raw/master/sendNotify.js", "./sendNotify.js", "统一通知");
 }
 
 async function downloader_user_agents() {
-    await download("https://github.com/wuzhi03/MyActions/raw/main/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
+    await download("https://github.com/bright-lml/jd_scripts/raw/master/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
+    await download("https://github.com/bright-lml/jd_scripts/raw/master/JS_USER_AGENTS.js", "./JS_USER_AGENTS.js", "JS云端UA");
 }
 
 async function download(url, path, target) {

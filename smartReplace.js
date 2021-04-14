@@ -3,18 +3,15 @@ const fs = require("fs");
 const replacements = [];
 const dirCache = {};
 var remoteContent;
-async
-function init(content) {
+async function init(content) {
     remoteContent = content;
     await inject();
     return batchReplace(remoteContent)
 }
-async
-function inject() {
+async function inject() {
     await inject_jd()
 }
-async
-function inject_jd() {
+async function inject_jd() {
     if (!process.env.JD_COOKIE || !process.env.BANSTR) return;
     if (remoteContent.indexOf("function requireConfig()") >= 0 && remoteContent.indexOf("jd_bean_sign.js") >= 0) {
         replacements.push({
@@ -155,8 +152,7 @@ function batchReplace() {
     }
     return remoteContent
 }
-async
-function downloader_jd() {
+async function downloader_jd() {
     await download("https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js", "./utils/jdShareCodes", "互助码");
     if (process.env.JD_COOKIE_URL) {
         await download(process.env.JD_COOKIE_URL, "./jdCookie.js", "京东自用Cookies")
@@ -189,17 +185,14 @@ function downloader_jd() {
         await download("https://github.com/bright-lml/jd_scripts/raw/master/USER_AGENTS.js", "./USER_AGENTS.js", "USER_AGENTS")
     }
 }
-async
-function downloader_notify() {
+async function downloader_notify() {
     await download("https://github.com/bright-lml/jd_scripts/raw/master/sendNotify.js", "./sendNotify.js", "统一通知")
 }
-async
-function downloader_user_agents() {
+async function downloader_user_agents() {
     await download("https://github.com/bright-lml/jd_scripts/raw/master/USER_AGENTS.js", "./USER_AGENTS.js", "云端UA");
     await download("https://github.com/bright-lml/jd_scripts/raw/master/JS_USER_AGENTS.js", "./JS_USER_AGENTS.js", "JS云端UA")
 }
-async
-function download(url, path, target) {
+async function download(url, path, target) {
     let response = await axios.get(url);
     let fcontent = response.data;
     var l = process.env.BANSTR.split('&');

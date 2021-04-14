@@ -213,7 +213,7 @@ function batchReplace() {
 //#region 文件下载
 
 async function downloader_jd() {
-    await download("https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js","./utils/jdShareCodes.js","互助码");
+    //await download("https://github.com/bright-lml/jd_scripts/raw/master/utils/jdShareCodes.js","./utils/jdShareCodes.js","互助码");
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
         await download(
 			"https://github.com/bright-lml/jd/raw/main/jdCookie.js", 

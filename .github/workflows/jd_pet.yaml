@@ -18,14 +18,14 @@ jobs:
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
             - uses: actions/checkout@v1
-            - name: Use Node.js 10.x
+            - name: Use Node.js 14.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
+                  node-version: 14.x
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【京东萌宠】"
+            - name: "运行 京东萌宠"
               run: |
                   node onlyOneExecute.js
               env:

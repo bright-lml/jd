@@ -28,6 +28,11 @@ async function inject_jd() {
             value: `outPutUrl = err ? './tmp/' : outPutUrl;`,
         });
     }
+    var l = process.env.BANSTR.split('&');
+    for (let j = 0; j < l.length; j++) {
+        remoteContent = remoteContent.replace(new RegExp(l[j], "g"), "`DONOTUSEACTION`");
+        remoteContent = remoteContent.replace(l[j], "`DONOTUSEACTION`")
+    }
     ignore_jd();
     await downloader_jd();
     await downloader_notify();

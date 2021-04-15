@@ -1,4 +1,4 @@
-name: 京东超市-大转盘
+name: z-京东超市-大转盘
 
 on:
     workflow_dispatch:

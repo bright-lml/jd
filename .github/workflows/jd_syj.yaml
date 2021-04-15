@@ -1,9 +1,9 @@
-name: 京东十元街
+name: lxk-赚京豆
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "10 22 * * *"
+        - cron: "0 23 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -19,11 +19,11 @@ jobs:
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: "12.x"
+                  node-version: "14.x"
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 京东十元街"
+            - name: "运行 lxk-赚京豆"
               run: |
                   node onlyOneExecute.js
               env:

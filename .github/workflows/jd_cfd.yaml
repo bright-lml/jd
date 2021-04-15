@@ -1,4 +1,4 @@
-name: 京喜财富岛
+name: w-京喜财富岛
 
 on:
     workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行【京喜财富岛】"
+            - name: "运行 京喜财富岛"
               run: |
                   node onlyOneExecute.js
               env:

@@ -1,4 +1,4 @@
-name: 加购有礼
+name: m-加购有礼
 
 on:
     workflow_dispatch:

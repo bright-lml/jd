@@ -1,4 +1,4 @@
-name: 手机狂欢城
+name: z-手机狂欢城
 
 on:
     workflow_dispatch:

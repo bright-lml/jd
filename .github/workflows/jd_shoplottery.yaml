@@ -1,4 +1,4 @@
-name: wuzhi03-店铺大转盘
+name: w-店铺大转盘
 
 on:
     workflow_dispatch:

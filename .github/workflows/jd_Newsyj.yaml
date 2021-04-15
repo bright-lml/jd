@@ -1,4 +1,4 @@
-name: New赚京豆🥔
+name: w-赚京豆
 
 on:
     workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 New赚京豆🥔"
+            - name: "运行 w-赚京豆"
               run: |
                   node onlyOneExecute.js
               env:

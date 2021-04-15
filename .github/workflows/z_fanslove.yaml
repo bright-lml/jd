@@ -1,4 +1,4 @@
-name: 粉丝互动
+name: z-粉丝互动
 
 on:
     workflow_dispatch:

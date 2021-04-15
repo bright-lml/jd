@@ -1,4 +1,4 @@
-name: 关注有礼
+name: m-关注有礼
 
 on:
     workflow_dispatch:

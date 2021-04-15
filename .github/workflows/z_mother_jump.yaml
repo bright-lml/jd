@@ -1,4 +1,4 @@
-name: 母婴跳一跳
+name: z-母婴跳一跳
 
 on:
     workflow_dispatch:

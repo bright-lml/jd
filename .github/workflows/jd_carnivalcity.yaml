@@ -1,4 +1,4 @@
-name: 京东手机狂欢城
+name: lxk-京东手机狂欢城
 
 on:
     workflow_dispatch:

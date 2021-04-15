@@ -1,4 +1,4 @@
-name: 5G超级盲盒
+name: z-5G超级盲盒
 
 on:
     workflow_dispatch:

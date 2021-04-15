@@ -1,4 +1,4 @@
-name: 百变大咖秀
+name: z-百变大咖秀
 
 on:
     workflow_dispatch:

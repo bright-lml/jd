@@ -1,4 +1,4 @@
-name: interCenter渠道店铺签到
+name: m-interCenter渠道店铺签到
 
 on:
     workflow_dispatch:

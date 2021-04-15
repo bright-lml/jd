@@ -1,4 +1,4 @@
-name: 有机牧场
+name: m-有机牧场
 
 on:
     workflow_dispatch:

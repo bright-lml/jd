@@ -1,4 +1,4 @@
-name: 华硕-爱奇艺
+name: z-华硕-爱奇艺
 
 on:
     workflow_dispatch:

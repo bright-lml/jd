@@ -1,4 +1,4 @@
-name: 京东极速版红包
+name: w-京东极速版红包
 
 on:
     workflow_dispatch:

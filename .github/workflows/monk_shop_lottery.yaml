@@ -1,4 +1,4 @@
-name: 店铺大转盘
+name: m-店铺大转盘
 
 on:
     workflow_dispatch:

@@ -1,4 +1,4 @@
-name: 京喜工厂
+name: 01-京喜工厂
 
 on:
     workflow_dispatch:

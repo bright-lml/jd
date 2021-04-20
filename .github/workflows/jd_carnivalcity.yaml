@@ -45,5 +45,5 @@ jobs:
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   SYNCURL: jd_carnivalcity.js
-                  REPOURL: https://github.com/wuzhi03/MyActions/raw/main/
+                  REPOURL: https://github.com/bright-lml/jd_scripts/raw/master/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

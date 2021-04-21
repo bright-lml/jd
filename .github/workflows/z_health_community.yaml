@@ -1,13 +1,13 @@
-name: z-手机狂欢城
+name: z_health_community
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 2,4,10,16,22 * * *"
+        - cron: "15 * * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: z_carnivalcity
+        types: z_health_community
 
 jobs:
     build:
@@ -19,11 +19,11 @@ jobs:
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: "12.x"
+                  node-version: "14.x"
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 手机狂欢城"
+            - name: "运行 z_health_community"
               run: |
                   node onlyOneExecute.js
               env:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: z_carnivalcity.js
+                  SYNCURL: z_health_community.js
                   REPOURL: https://share.r2ray.com/dust/i-chenzhe/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

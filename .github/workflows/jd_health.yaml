@@ -1,13 +1,13 @@
-name: m-interCenter渠道店铺签到
+name: 东东健康社区
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 14,16 * * *"
+        - cron: "0 15,*/4 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: monk_inter_shop_sign
+        types: jd_health
 
 jobs:
     build:
@@ -19,11 +19,11 @@ jobs:
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: "12.x"
+                  node-version: "14.x"
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 interCenter渠道店铺签到"
+            - name: "运行 东东健康社区"
               run: |
                   node onlyOneExecute.js
               env:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: monk_inter_shop_sign.js
-                  REPOURL: https://share.r2ray.com/dust/normal/
+                  SYNCURL: jd_health.js
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

@@ -1,5 +1,5 @@
 # File: .github/workflows/repo-sync.yaml
-name: sync-bright-lml-jd
+name: 00-sync-bright-lml-jd
 
 on:
   workflow_dispatch:

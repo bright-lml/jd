@@ -1,13 +1,13 @@
-name: z-百变大咖秀
+name: z-超级无线组队分奖品
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 2,3 * * *"
+        - cron: "15 19 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: z_entertainment
+        types: z_shop_captain
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 百变大咖秀"
+            - name: "运行 超级无线组队分奖品"
               run: |
                   node onlyOneExecute.js
               env:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: z_entertainment.js
-                  REPOURL: https://share.r2ray.com/dust/i-chenzhe/
+                  SYNCURL: z_shop_captain.js
+                  REPOURL: https://github.com/monk-coder/dust/raw/dust/i-chenzhe/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

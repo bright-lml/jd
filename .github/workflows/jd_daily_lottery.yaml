@@ -1,13 +1,13 @@
-name: m-“韧”性探索 空降好礼
+name: 每日抽奖
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 2 * * *"
+        - cron: "3 14,15,17 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: monk_vinda
+        types: jd_daily_lottery
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 “韧”性探索 空降好礼"
+            - name: "运行 每日抽奖"
               run: |
                   node onlyOneExecute.js
               env:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: monk_vinda.js
-                  REPOURL: https://share.r2ray.com/dust/member/
+                  SYNCURL: jd_daily_lottery.js
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

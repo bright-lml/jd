@@ -6,7 +6,7 @@ name: 京东取关店铺
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 */3 * * *"
+        - cron: "0 7 * * *"
     watch:
         types: [started]
     repository_dispatch:

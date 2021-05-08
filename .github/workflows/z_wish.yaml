@@ -1,4 +1,4 @@
-name: m-众筹许愿池
+name: z-众筹许愿池
 
 on:
     workflow_dispatch:

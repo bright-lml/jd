@@ -1,4 +1,4 @@
-name: z-超级摇一摇
+name: z-摇一摇
 
 on:
     workflow_dispatch:

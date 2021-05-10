@@ -1,13 +1,13 @@
-name: lxk-5G超级盲盒
+name: m-探秘无限星空
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 16,*/3 * * *"
+        - cron: "0 0 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_mohe
+        types: adolf_ETIP
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 5G超级盲盒"
+            - name: "运行 探秘无限星空"
               run: |
                   node onlyOneExecute.js
               env:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jd_mohe.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
+                  SYNCURL: adolf_ETIP.js
+                  REPOURL: https://github.com/monk-coder/dust/raw/dust/car/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

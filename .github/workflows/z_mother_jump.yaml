@@ -3,7 +3,7 @@ name: z-母婴跳一跳
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0,6,12 * * *"
+        - cron: "15 0,6,12 * * *"
     watch:
         types: [started]
     repository_dispatch:

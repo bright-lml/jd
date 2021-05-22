@@ -1,28 +1,29 @@
-name: 京东取关店铺
+name: m-坐等更新
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 14 * * 3,6"
+        - cron: "13 1 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_unsubscribe
+        types: adolf_urge
 
 jobs:
     build:
         runs-on: ubuntu-latest
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js 14.x
+            - name: 拉取代码
+              uses: actions/checkout@v2
+            - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: 14.x
-            - name: npm install
+                  node-version: "14.x"
+            - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 京东取关店铺"
+            - name: "运行 坐等更新"
               run: |
                   node onlyOneExecute.js
               env:
@@ -43,7 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  UN_SUBSCRIBES: ${{ github.event.client_payload.UNSUBSCRIBE || secrets.UNSUBSCRIBE }}
-                  SYNCURL: jd_unsubscribe.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
+                  SYNCURL: adolf_urge.js
+                  REPOURL: https://github.com/monk-coder/dust/raw/dust/normal/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

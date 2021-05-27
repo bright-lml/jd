@@ -3,7 +3,7 @@ name: lxk-家电星推官
 on:
     workflow_dispatch:
     schedule:
-        - cron: "5 1-10/3 * * *"
+        - cron: "50 1,15,16 * * *"
     watch:
         types: [started]
     repository_dispatch:

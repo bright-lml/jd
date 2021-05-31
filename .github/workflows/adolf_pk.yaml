@@ -1,4 +1,4 @@
-name: m-京享值PK
+name: w-京享值PK
 
 on:
     workflow_dispatch:
@@ -7,7 +7,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: adolf_pk
+        types: jd_pk
 
 jobs:
     build:
@@ -44,6 +44,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: adolf_pk.js
-                  REPOURL: https://github.com/monk-coder/dust/raw/dust/normal/
+                  SYNCURL: jd_pk.js
+                  REPOURL: https://github.com/wuzhi03/MyActions/raw/main/
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}

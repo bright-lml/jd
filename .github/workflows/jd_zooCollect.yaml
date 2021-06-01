@@ -3,7 +3,7 @@ name: lxk-动物联萌专门收集金币
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0-59/30 * * *"
+        - cron: "0-59/30 * * * *"
     watch:
         types: [started]
     repository_dispatch:

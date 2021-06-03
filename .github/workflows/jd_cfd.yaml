@@ -3,7 +3,7 @@ name: w-京喜财富岛
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0,5,11 * * *"
+        - cron: "0 5,11,16 * * *"
     watch:
         types: [started]
     repository_dispatch:

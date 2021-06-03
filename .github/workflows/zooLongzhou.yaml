@@ -3,7 +3,7 @@ name: zooPanda-浓情618 与“粽”不同
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0-23/1 * * *"
+        - cron: "0 5 * * *"
     watch:
         types: [started]
     repository_dispatch:

@@ -1,4 +1,4 @@
-name: 京喜签到
+name: lxk-京喜领88元红包
 
 on:
     workflow_dispatch:
@@ -7,7 +7,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jx_sign
+        types: jd_jxlhb
 
 jobs:
     build:
@@ -22,7 +22,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 京喜签到"
+            - name: "运行 京喜领88元红包"
               run: |
                   node onlyOneExecute.js
               env:
@@ -43,6 +43,6 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jx_sign.js
+                  SYNCURL: jd_jxlhb.js
                   REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
